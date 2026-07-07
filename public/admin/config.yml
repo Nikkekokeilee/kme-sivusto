@@ -1,0 +1,17 @@
+backend:
+  name: github
+  repo: Nikkekokeilee/kme-sivusto   # ← Vaihda oma GitHub-repoosi
+  branch: main
+
+media_folder: "public/images"
+public_folder: "/images"
+
+collections:
+  - name: "pages"
+    label: "Sivut"
+    folder: "src/data/sisalto"
+    create: true
+    extension: "js"
+    fields:
+      - { label: "Otsikko", name: "otsikko", widget: "string" }
+      - { label: "Sisältö", name: "sisalto", widget: "markdown" }
