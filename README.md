@@ -1,0 +1,2 @@
+# kme-sivusto
+Yhdistyksen verkkosivusto
