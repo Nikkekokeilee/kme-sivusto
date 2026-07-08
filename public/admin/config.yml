@@ -1,7 +1,11 @@
 backend:
   name: github
-  repo: Nikkekokeilee/kme-sivusto   # ← Vaihda oma GitHub-repoosi
+  repo: Nikkekokeilee/kme-sivusto
   branch: main
+  auth_type: implicit
+  app_id: YOUR_GITHUB_APP_ID
+
+local_backend: true
 
 media_folder: "public/images"
 public_folder: "/images"
@@ -9,9 +13,14 @@ public_folder: "/images"
 collections:
   - name: "pages"
     label: "Sivut"
-    folder: "src/data/sisalto"
+    folder: "src/data/pages"
     create: true
-    extension: "js"
+    slug: "{{slug}}"
+    extension: "json"
+    format: "json"
     fields:
-      - { label: "Otsikko", name: "otsikko", widget: "string" }
-      - { label: "Sisältö", name: "sisalto", widget: "markdown" }
+      - { label: "Nimi", name: "title", widget: "string" }
+      - { label: "Lead-teksti", name: "lead", widget: "markdown" }
+      - label: "Sisältö"
+        name: "content"
+        widget: "markdown"
