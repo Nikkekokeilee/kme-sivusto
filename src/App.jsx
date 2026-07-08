@@ -13,9 +13,9 @@ import Yhteystiedot from "./pages/Yhteystiedot";
 function App() {
   return (
     <BrowserRouter>
-      <div className="min-h-screen bg-slate-50">
+      <div className="min-h-screen bg-[#0a0a0a] text-white">
         <Navigointi />
-        <main>
+        <main className="pb-20">
           <Routes>
             <Route path="/" element={<Etusivu />} />
             <Route path="/ajankohtaista" element={<Ajankohtaista />} />
